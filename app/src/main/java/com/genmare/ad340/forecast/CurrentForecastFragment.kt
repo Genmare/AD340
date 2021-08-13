@@ -60,7 +60,8 @@ class CurrentForecastFragment : Fragment() {
             Log.v("forecastItems",forecastItems.toString())
             dailyForecastAdapter.submitList(forecastItems)
         }
-        forecastRepository.weeklyForecast.observe(this, weeklyForecastObserver)
+//        forecastRepository.weeklyForecast.observe(this, weeklyForecastObserver)
+        forecastRepository.weeklyForecast.observe(viewLifecycleOwner, weeklyForecastObserver)
 
         forecastRepository.loadForecast(zipcode)
 

@@ -1,5 +1,6 @@
 package com.genmare.ad340
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,7 @@ class DailyForecastListAdapter(
                 return oldItem === newItem
             }
 
+            @SuppressLint("DiffUtilEquals")
             override fun areContentsTheSame(
                 oldItem: DailyForecast,
                 newItem: DailyForecast
