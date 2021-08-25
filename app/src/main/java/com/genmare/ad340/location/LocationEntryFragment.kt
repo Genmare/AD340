@@ -1,6 +1,5 @@
 package com.genmare.ad340.location
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,7 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.genmare.ad340.AppNavigator
+import androidx.navigation.fragment.findNavController
+import com.genmare.ad340.Location
+import com.genmare.ad340.LocationRepository
 
 import com.genmare.ad340.R
 
@@ -18,17 +19,14 @@ import com.genmare.ad340.R
  */
 class LocationEntryFragment : Fragment() {
 
-    private lateinit var appNavigator: AppNavigator
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        appNavigator = context as AppNavigator
-    }
+    private lateinit var locationRepository: LocationRepository
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        locationRepository = LocationRepository(requireContext())
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_location_entry, container, false)
 
@@ -41,7 +39,9 @@ class LocationEntryFragment : Fragment() {
             if (zipcode.length != 5){
                 Toast.makeText(requireContext(), R.string.zipcode_entry_error, Toast.LENGTH_SHORT).show()
             } else {
-                appNavigator.navigateToCurrentForecast(zipcode)
+                locationRepository.saveLocation(Location.Zipcode(zipcode))
+//                appNavigator.navigateToCurrentForecast(zipcode)
+                findNavController().navigateUp() // enlève la fenêtre active pour se retrouver à la présédente
             }
         }
 
