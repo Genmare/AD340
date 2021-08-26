@@ -21,7 +21,7 @@ class ForecastRepository {
     val weeklyForecast: LiveData<WeeklyForecast> = _weeklyForecast
 
     fun loadWeeklyForecast(zipcode: String) {
-        val call = createOpenWeatherMapService().currentWeather(zipcode, "imperial", BuildConfig.OPEN_WEATHER_MAP_API_KEY)
+        val call = createOpenWeatherMapService().currentWeather("${zipcode},fr", "imperial", BuildConfig.OPEN_WEATHER_MAP_API_KEY)
         call.enqueue(object : Callback<CurrentWeather> {
             override fun onResponse(
                 call: Call<CurrentWeather>,
@@ -35,6 +35,7 @@ class ForecastRepository {
                         lon = weatherResponse.coord.long,
                         exclude = "current,minutely,hourly",
                         units = "imperial",
+                        lang ="fr",
                         apiKey = BuildConfig.OPEN_WEATHER_MAP_API_KEY
                     )
                     forecastCall.enqueue(object : Callback<WeeklyForecast> {
@@ -66,7 +67,7 @@ class ForecastRepository {
     }
 
     fun loadCurrentForecast( zipcode: String) {
-        val call = createOpenWeatherMapService().currentWeather(zipcode, "imperial", BuildConfig.OPEN_WEATHER_MAP_API_KEY)
+        val call = createOpenWeatherMapService().currentWeather("${zipcode},fr", "imperial", BuildConfig.OPEN_WEATHER_MAP_API_KEY)
         call.enqueue(object : Callback<CurrentWeather> {
             override fun onResponse(
                 call: Call<CurrentWeather>,

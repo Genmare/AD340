@@ -30,6 +30,7 @@ interface OpenWeatherMapService {
         @Query("lon") lon: Float,
         @Query("exclude") exclude: String,
         @Query("units") units: String,
+        @Query("lang") lang: String,
         @Query("appid") apiKey: String
     ): Call<WeeklyForecast>
 }
