@@ -14,7 +14,7 @@ import com.genmare.ad340.api.DailyForecast
 import java.text.SimpleDateFormat
 import java.util.*
 
-private val DATE_FORMAT = SimpleDateFormat("dd-MM-yyyy")
+private val DATE_FORMAT = SimpleDateFormat("E dd-MM-yyyy")
 
 class DailyForecastViewHolder(
         view: View,

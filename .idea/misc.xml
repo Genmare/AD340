@@ -4,12 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/drawable/ic_baseline_wb_cloudy_24.xml" value="0.2490740740740741" />
+        <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout-sw600dp/fragment_current_forecast.xml" value="0.25" />
         <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/fragment_current_forecast.xml" value="0.33" />
         <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/fragment_forecast_details.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/fragment_location_entry.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/fragment_weekly_forecast.xml" value="0.16530797101449277" />
-        <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/item_daily_forecast.xml" value="0.25" />
+        <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/fragment_weekly_forecast.xml" value="0.33" />
+        <entry key="..\:/Users/Greg/Documents/AndroidStudioProjects/AD340/app/app/src/main/res/layout/item_daily_forecast.xml" value="0.67" />
       </map>
     </option>
   </component>
