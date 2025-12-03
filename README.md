@@ -1,0 +1,1 @@
+Application Android de météo fait avec **Kotlin**. Ce code provient du tutoriel **9 Week Android Development Course for Beginners**  https://youtube.com/playlist?list=PLEPZdzLLJH94Jk_Jz-cTUXYFoObPBH7KB&si=tAvT_pKNabYSRyXz
